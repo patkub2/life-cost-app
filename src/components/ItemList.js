@@ -2,18 +2,20 @@ import React, { useContext } from "react";
 import ItemDetails from "./ItemDetails";
 import { ItemContext } from "../contexts/ItemContext";
 
+//this component chceks if items exist if yes creates a map of items
+
 const ItemList = () => {
   const { items } = useContext(ItemContext);
   return items.length ? (
     <div className="item-list">
       <ul>
-        <div className="it-grid-container">
-          <div className="it-date">Date</div>
-          <div className="it-category">Category</div>
-          <div className="it-description">Description</div>
-          <div className="it-value">Value</div>
-          <div className="it-x">Delete</div>
-          <div className="it-edit">Edit</div>
+        <div className="title-grid-container">
+          <div className="title-date">Date</div>
+          <div className="title-category">Category</div>
+          <div className="title-description">Description</div>
+          <div className="title-value">Value</div>
+          <div className="title-x">Delete</div>
+          <div className="title-edit">Edit</div>
         </div>
 
         {items.map((item) => {

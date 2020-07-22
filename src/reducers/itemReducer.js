@@ -1,8 +1,12 @@
-import uuid from "uuid/v4";
+import uuid from "uuid/v4"; //library used for unique keys
+import { EditContext } from "../contexts/EditContext";
+import { useContext } from "react";
+
+//reduser of storaged items
 
 export const itemReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_ITEM":
+    case "ADD_ITEM": //adds an item with id
       return [
         ...state,
         {
@@ -14,7 +18,8 @@ export const itemReducer = (state, action) => {
         },
       ];
     case "REMOVE_ITEM":
-      return state.filter((item) => item.id !== action.id);
+      return state.filter((item) => item.id !== action.id); //removes items by filtering all items that have other id
+
     default:
       return state;
   }

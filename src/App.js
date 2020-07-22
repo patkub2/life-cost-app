@@ -3,15 +3,18 @@ import Navbar from "./components/Navbar";
 import ItemContextProvider from "./contexts/ItemContext";
 import ItemList from "./components/ItemList";
 import NewItemForm from "./components/NewItemForm";
+import { EditContextProvider } from "./contexts/EditContext";
 
 function App() {
   return (
     <div className="App">
-      <ItemContextProvider>
-        <Navbar />
-        <NewItemForm />
-        <ItemList />
-      </ItemContextProvider>
+      <EditContextProvider>
+        <ItemContextProvider>
+          <Navbar />
+          <NewItemForm />
+          <ItemList />
+        </ItemContextProvider>
+      </EditContextProvider>
     </div>
   );
 }

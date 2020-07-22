@@ -1,18 +1,12 @@
-import React, { useContext } from "react";
-import { EditContext } from "../contexts/EditContext";
+import React, { useContext, useState } from "react";
 import { ItemContext } from "../contexts/ItemContext";
-const NewItemForm = () => {
+
+const EditItemForm = () => {
   const { dispatch } = useContext(ItemContext);
-  const {
-    date,
-    category,
-    description,
-    value,
-    setValue,
-    setCategory,
-    setDescription,
-    setDate,
-  } = useContext(EditContext);
+  const [date, setDate] = useState("");
+  const [category, setCategory] = useState("");
+  const [description, setDescription] = useState("");
+  const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,9 +50,9 @@ const NewItemForm = () => {
         onChange={(e) => setValue(e.target.value)}
         required
       />
-      <input type="submit" value="add item" />
+      <input type="submit" value="edit item" />
     </form>
   );
 };
 
-export default NewItemForm;
+export default EditItemForm;
