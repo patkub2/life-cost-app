@@ -9,6 +9,7 @@ const ItemDetails = ({ item }) => {
   const { toggleEdit } = useContext(EditContext);
 
   function handleclick() {
+    //on edit removes an item and adds the text to form
     toggleEdit(item);
     dispatch({ type: "REMOVE_ITEM", id: item.id });
   }
