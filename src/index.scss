@@ -6,7 +6,7 @@ $five-color: #000000;
 
 body {
   margin: 0;
-  font-family: "Roboto";
+  font-family: "Lato";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $one-color;
@@ -54,6 +54,7 @@ input {
   background: $two-color;
   color: $five-color;
   border: 0;
+  cursor: pointer;
 
   border-radius: 10px;
 }
@@ -84,7 +85,7 @@ input[type="submit"] {
 }
 .item-grid-container {
   display: grid;
-  grid-template-columns: 0.7fr 0.9fr 1.9fr 0.5fr;
+  grid-template-columns: 0.7fr 0.9fr 1.9fr 0.6fr;
   grid-template-rows: 1fr;
   gap: 4px;
   padding: 2px 10px;
@@ -114,7 +115,7 @@ input[type="submit"] {
   padding: 10px;
   background: $two-color;
   color: rgb(221, 79, 13);
-  font-weight: 500;
+  font-weight: 600;
 }
 .item-x {
   grid-area: item-x;
@@ -137,9 +138,9 @@ input[type="submit"] {
 }
 
 .title-grid-container {
-  font-weight: 500;
+  font-weight: 600;
   display: grid;
-  grid-template-columns: 0.7fr 0.9fr 1.9fr 0.5fr;
+  grid-template-columns: 0.7fr 0.9fr 1.9fr 0.6fr;
   grid-template-rows: 1fr;
   gap: 4px;
   padding: 20px 10px;

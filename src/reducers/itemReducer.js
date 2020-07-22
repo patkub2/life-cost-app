@@ -1,6 +1,4 @@
 import uuid from "uuid/v4"; //library used for unique keys
-import { EditContext } from "../contexts/EditContext";
-import { useContext } from "react";
 
 //reduser of storaged items
 
