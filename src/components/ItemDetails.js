@@ -26,10 +26,10 @@ const ItemDetails = ({ item }) => {
           className="item-x"
           onClick={() => dispatch({ type: "REMOVE_ITEM", id: item.id })}
         >
-          <img src={bin} className="icon" />
+          <img src={bin} className="icon" alt="no img" />
         </div>
         <div className="item-edit" onClick={handleclick}>
-          <img src={edit} className="icon" />
+          <img src={edit} className="icon" alt="no img" />
         </div>
       </div>
     </>
