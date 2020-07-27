@@ -1,32 +1,29 @@
-$one-color: #6b6b6b;
+$one-color: #ffffff;
 $two-color: #f0f0f0;
-$three-color: #c4c4c4;
-$four-color: #858585;
-$five-color: #000000;
+$font-color: #000000;
+$border-color: #000000;
 
 body {
+  @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap");
   margin: 0;
-  font-family: "Lato";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Red Hat Text", sans-serif;
   background: $one-color;
 }
 .App {
-  background: $four-color;
+  background: $one-color;
   margin: 20px auto;
-
   padding: 20px;
   width: 90%;
   border-radius: 40px;
   max-width: 900px;
-  color: $five-color;
+  color: $font-color;
 }
 .navbar {
   padding: 10px 20px;
   text-align: center;
-  background: $three-color;
-
+  background: $one-color;
   border-radius: 20px;
+  font-size: 18px;
 }
 
 .item-list {
@@ -47,25 +44,30 @@ form {
 }
 
 input {
-  width: 100%;
+  display: block;
+  width: 50%;
   padding: 10px;
   box-sizing: border-box;
-  margin: 6px 0;
-  background: $two-color;
-  color: $five-color;
+  margin: 10px auto;
+  background: $one-color;
+  color: $font-color;
   border: 0;
   cursor: pointer;
-
+  border: 1px solid $border-color;
+  box-sizing: border-box;
   border-radius: 10px;
 }
 input[type="submit"] {
   width: auto;
   margin: 10px auto;
-  background: $two-color;
-  border: 0;
   padding: 10px 20px;
   display: block;
-
+  background: $one-color;
+  color: $font-color;
+  border: 0;
+  cursor: pointer;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
   border-radius: 10px;
 }
 
@@ -77,7 +79,7 @@ input[type="submit"] {
   padding: 6px 20px;
   display: block;
 
-  color: $five-color;
+  color: $font-color;
 }
 .remove:hover {
   opacity: 0.7;
@@ -90,96 +92,47 @@ input[type="submit"] {
   gap: 4px;
   padding: 2px 10px;
   grid-template-areas: "item-date item-category item-description item-value item-x item-edit";
+  background: $one-color;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-top: -1px;
 }
-
-.item-date {
-  grid-area: item-date;
-  padding: 10px;
-  background: $two-color;
-}
-
-.item-category {
-  grid-area: item-category;
-  padding: 10px;
-  background: $two-color;
-}
-
-.item-description {
-  grid-area: item-description;
-  padding: 10px;
-  background: $two-color;
-}
-
 .item-value {
-  grid-area: item-value;
-  padding: 10px;
-  background: $two-color;
-  color: rgb(221, 79, 13);
-  font-weight: 600;
+  color: red;
+  font-weight: bold;
 }
-.item-x {
-  grid-area: item-x;
-  padding: 10px;
-  background: $two-color;
+
+.item-edit:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 .item-x:hover {
   opacity: 0.7;
   cursor: pointer;
 }
-
-.item-edit {
-  grid-area: item-edit;
-  padding: 10px;
-  background: $two-color;
-}
-.item-edit:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
 .title-grid-container {
   font-weight: 600;
   display: grid;
-  grid-template-columns: 0.7fr 0.9fr 1.9fr 0.6fr;
+  grid-template-columns: 0.7fr 0.9fr 1.9fr 0.6fr 0.5fr;
   grid-template-rows: 1fr;
   gap: 4px;
   padding: 20px 10px;
   border-radius: 20px 20px 0px 0px;
-  grid-template-areas: "item-date item-category item-description item-value item-x item-edit";
+  grid-template-areas: "title-date title-category title-description title-value title-x title-edit";
+  background: $two-color;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px;
 }
-
 .title-date {
-  grid-area: item-date;
-  padding: 10px;
-  border-radius: 10px 0px 0px 0px;
-  background: $two-color;
+  margin-left: 20px;
 }
-
 .title-category {
-  grid-area: item-category;
-  padding: 10px;
-  background: $two-color;
+  margin-left: 10px;
 }
-
-.title-description {
-  grid-area: item-description;
-  padding: 10px;
-  background: $two-color;
-}
-
-.title-value {
-  grid-area: item-value;
-  padding: 10px;
-  background: $two-color;
-}
-.title-x {
-  grid-area: item-x;
-  padding: 10px;
-  background: $two-color;
-}
-.title-edit {
-  grid-area: item-edit;
-  padding: 10px;
-  background: $two-color;
-  border-radius: 0px 10px 0px 0px;
+.icon {
+  width: 20px;
+  margin-left: 20px;
 }

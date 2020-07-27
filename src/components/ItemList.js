@@ -14,8 +14,8 @@ const ItemList = () => {
           <div className="title-category">Category</div>
           <div className="title-description">Description</div>
           <div className="title-value">Value</div>
-          <div className="title-x">Delete</div>
-          <div className="title-edit">Edit</div>
+          <div className="title-x"> </div>
+          <div className="title-edit"> </div>
         </div>
 
         {items.map((item) => {

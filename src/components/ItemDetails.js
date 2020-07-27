@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { ItemContext } from "../contexts/ItemContext";
 import { EditContext } from "../contexts/EditContext";
+import bin from "../icons/bin.svg";
+import edit from "../icons/edit.svg";
 
 //this component is a child component from Item list it has all the information from one item that is stored in local storage
 
@@ -24,10 +26,10 @@ const ItemDetails = ({ item }) => {
           className="item-x"
           onClick={() => dispatch({ type: "REMOVE_ITEM", id: item.id })}
         >
-          Delete
+          <img src={bin} className="icon" />
         </div>
         <div className="item-edit" onClick={handleclick}>
-          Edit
+          <img src={edit} className="icon" />
         </div>
       </div>
     </>
